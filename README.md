@@ -52,14 +52,6 @@
 
 ---
 
-## 📈 GitHub Stats
-<p>
-  <img src="https://github-readme-stats.vercel.app/api?username=ujjwalredd&show_icons=true&include_all_commits=true&cache_seconds=86400" height="150" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ujjwalredd&layout=compact&cache_seconds=86400" height="150" />
-</p>
-
----
-
 ## 🤝 Let’s connect
 - 🌐 Portfolio: https://ujjwalreddyks.com  
 - 💼 LinkedIn: https://www.linkedin.com/in/ujjwalreddyks  
