@@ -43,11 +43,11 @@
 ---
 
 ## 🛠️ Tech I use
-**Languages:** Python, SQL  
-**LLM / RAG:** embeddings, FAISS, FastAPI, Ollama, evals  
-**Data Engineering:** Airflow, dbt, PostgreSQL, Docker  
-**ML:** PyTorch, scikit-learn, PySpark  
-**Cloud/BI:** AWS, Power BI
+- **Languages:** Python, SQL  
+- **LLM / RAG:** embeddings, FAISS, FastAPI, Ollama, evals  
+- **Data Engineering:** Airflow, dbt, PostgreSQL, Docker  
+- **ML:** PyTorch, scikit-learn, PySpark  
+- **Cloud/BI:** AWS, Power BI
 
 ---
 
