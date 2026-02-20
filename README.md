@@ -22,10 +22,24 @@
 
 ---
 
-## 🧠 About me
-- I build **LLM-powered products** (agents, RAG, structured extraction) and **data systems** (pipelines, orchestration, analytics-ready modeling).
-- Interested in **graph data platforms**, scalable ML, and building tools people actually ship.
-- 
+## 🚀 What I do
+- **AI Agents & LLM Apps:** tool-using systems, retrieval + reasoning, structured extraction
+- **Data Engineering:** ELT pipelines, orchestration, analytics-ready modeling
+- **Applied ML:** recommendation systems, model training, evaluation, and shipping results
+
+---
+
+## ⭐ Featured Projects (selected)
+
+| Project | What it is | Tech / Focus |
+|---|---|---|
+| **Axiomeer** | Marketplace for AI agents | Python • agent ecosystems • platform building |
+| **TextbookAPI** | Turns PDFs into a searchable API for Q&A | FastAPI • embeddings • FAISS • PyMuPDF • Ollama |
+| **Structured Knowledge Notation (SKN)** | Token-efficient extraction format with confidence/causality/gaps | LLM extraction • benchmarks • epistemic metadata |
+| **ELT Pipeline (Airflow + dbt + Postgres)** | Fully containerized ELT pipeline w/ orchestration + transformations | Airflow • dbt • PostgreSQL • Docker |
+| **LLM Fine-Tuning** | Fine-tuning experiments (WhatsApp chat style) | LoRA • datasets • training workflows |
+| **Blackjack Analytics Pipeline** | End-to-end cloud analytics pipeline for 900K blackjack hands | AWS (S3/EC2/SageMaker) • PySpark • Power BI |
+
 ---
 
 ## 🛠️ Tech I use
