@@ -28,38 +28,6 @@
 
 ---
 
-## 🧩 Featured work
-<p align="center">
-  <a href="https://github.com/ujjwalredd/Axiomeer">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=ujjwalredd&repo=Axiomeer&theme=transparent&hide_border=true" />
-  </a>
-  <a href="https://github.com/ujjwalredd/TextbookAPI">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=ujjwalredd&repo=TextbookAPI&theme=transparent&hide_border=true" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/ujjwalredd/Structured-Knowledge-Notation">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=ujjwalredd&repo=Structured-Knowledge-Notation&theme=transparent&hide_border=true" />
-  </a>
-  <a href="https://github.com/ujjwalredd/ELT-Pipeline-Airflow">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=ujjwalredd&repo=ELT-Pipeline-Airflow&theme=transparent&hide_border=true" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/ujjwalredd/Movie-Recommendation-Engine">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=ujjwalredd&repo=Movie-Recommendation-Engine&theme=transparent&hide_border=true" />
-  </a>
-  <a href="https://github.com/ujjwalredd/Music-Genre-Classification">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=ujjwalredd&repo=Music-Genre-Classification&theme=transparent&hide_border=true" />
-  </a>
-</p>
-
-> Want this section to look even stronger? Pin your top 6 repos on your GitHub profile too (Profile → **Customize your pins**).
-
----
-
 ## 🛠️ Tech I use
 **Languages:** Python, SQL  
 **LLM / RAG:** embeddings, FAISS, FastAPI, Ollama, evals  
@@ -70,12 +38,7 @@
 ---
 
 ## 📊 GitHub stats (dark/light safe)
-<!-- These are duplicated on purpose so they show correctly in BOTH themes -->
-<p align="center">
-  <!-- Dark mode -->
-  <img src="https://github-readme-stats.vercel.app/api?username=ujjwalredd&show_icons=true&rank_icon=github&hide_border=true&theme=dark&cache_seconds=86400#gh-dark-mode-only" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ujjwalredd&layout=donut&hide_border=true&theme=dark&cache_seconds=86400#gh-dark-mode-only" height="165" />
-</p>
+<!-- These are duplicated on purpose so they show correctly in BOTH themes --
 
 <p align="center">
   <!-- Light mode -->
