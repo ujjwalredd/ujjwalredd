@@ -41,7 +41,6 @@
 <!-- These are duplicated on purpose so they show correctly in BOTH themes -->
 <p align="center">
   <!-- Streak (optional but looks great) -->
-  <img src="https://streak-stats.demolab.com?user=ujjwalredd&hide_border=true&theme=dark#gh-dark-mode-only" height="180" />
   <img src="https://streak-stats.demolab.com?user=ujjwalredd&hide_border=true&theme=default#gh-light-mode-only" height="180" />
 </p>
 
