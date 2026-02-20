@@ -37,14 +37,8 @@
 
 ---
 
-## 📊 GitHub stats (dark/light safe)
+## 📊 GitHub stats
 <!-- These are duplicated on purpose so they show correctly in BOTH themes -->
-<p align="center">
-  <!-- Light mode -->
-  <img src="https://github-readme-stats.vercel.app/api?username=ujjwalredd&show_icons=true&rank_icon=github&hide_border=true&theme=default&cache_seconds=86400#gh-light-mode-only" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ujjwalredd&layout=donut&hide_border=true&theme=default&cache_seconds=86400#gh-light-mode-only" height="165" />
-</p>
-
 <p align="center">
   <!-- Streak (optional but looks great) -->
   <img src="https://streak-stats.demolab.com?user=ujjwalredd&hide_border=true&theme=dark#gh-dark-mode-only" height="180" />
