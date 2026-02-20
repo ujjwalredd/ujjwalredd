@@ -1,6 +1,6 @@
 <!-- Profile README for github.com/ujjwalredd -->
 
-<h1 align="center">Ujjwal Reddy K S</h1>
+<h1 align="center">Ujjwal Reddy K S 😎 </h1>
 <p align="center">
   MS Data Science @ Indiana University • AI Agents • Data Engineering • Applied ML
 </p>
