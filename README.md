@@ -25,7 +25,7 @@
 ## 🧠 About me
 - I build **LLM-powered products** (agents, RAG, structured extraction) and **data systems** (pipelines, orchestration, analytics-ready modeling).
 - Interested in **graph data platforms**, scalable ML, and building tools people actually ship.
-
+- 
 ---
 
 ## 🛠️ Tech I use
@@ -38,8 +38,7 @@
 ---
 
 ## 📊 GitHub stats (dark/light safe)
-<!-- These are duplicated on purpose so they show correctly in BOTH themes --
-
+<!-- These are duplicated on purpose so they show correctly in BOTH themes -->
 <p align="center">
   <!-- Light mode -->
   <img src="https://github-readme-stats.vercel.app/api?username=ujjwalredd&show_icons=true&rank_icon=github&hide_border=true&theme=default&cache_seconds=86400#gh-light-mode-only" height="165" />
