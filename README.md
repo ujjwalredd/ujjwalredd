@@ -33,6 +33,7 @@
 
 | Project | What it is | Tech / Focus |
 |---|---|---|
+| **Supply Chain AI Operating System** | An end-to-end supply chain AI platform | SQLAlchemy • Kafka • dbt • Dagster • Docker Compose |
 | **Axiomeer** | Marketplace for AI agents | Python • agent ecosystems • platform building |
 | **TextbookAPI** | Turns PDFs into a searchable API for Q&A | FastAPI • embeddings • FAISS • PyMuPDF • Ollama |
 | **Structured Knowledge Notation (SKN)** | Token-efficient extraction format with confidence/causality/gaps | LLM extraction • benchmarks • epistemic metadata |
