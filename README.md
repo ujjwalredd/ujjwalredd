@@ -27,7 +27,7 @@
 
 ---
 
-## 👋 About Me
+## About Me
 
 I am a Data Science graduate student at Indiana University focused on **AI agents, data engineering, applied machine learning, and LLM-powered systems**.
 
@@ -42,7 +42,7 @@ I like building systems that are not just demos, but have real architecture behi
 
 ---
 
-## 🚀 Featured Work
+## Featured Work
 
 ### AI Agents & Agent Infrastructure
 
@@ -55,8 +55,6 @@ I like building systems that are not just demos, but have real architecture behi
 | **Verix** | Cryptographic trust infrastructure for AI agents, supporting agent certificates, tamper-proof audit logs, Merkle inclusion proofs, and enterprise observability. | Python • FastAPI • PostgreSQL • Redis • Kubernetes • Helm • OpenTelemetry |
 | **Autonomous AI Company OS** | Multi-agent operating framework that models company roles such as CEO, CTO, engineers, and DevOps agents, with organizational memory, RAG, and Redis-based communication. | Python • TypeScript • Redis Streams • Supabase • ChromaDB • LlamaIndex • Docker |
 
----
-
 ### Data Engineering, Analytics & MLOps
 
 | Project | Description | Tech / Focus |
@@ -66,8 +64,6 @@ I like building systems that are not just demos, but have real architecture behi
 | **Blackjack Analytics Pipeline** | End-to-end analytics pipeline for blackjack simulations and strategy analysis, including large-scale data processing and BI reporting. | AWS S3 • EC2 • SageMaker • PySpark • Power BI |
 | **Interactive ML Pipeline** | Modular ML workflow for preprocessing, training, evaluation, and experimentation across datasets and models. | Python • Jupyter • scikit-learn • ML Pipelines |
 | **dbt-core Fork** | Hands-on exploration and customization of the dbt-core analytics engineering codebase. | Python • dbt • Analytics Engineering |
-
----
 
 ### Applied ML, LLMs & NLP
 
@@ -80,8 +76,6 @@ I like building systems that are not just demos, but have real architecture behi
 | **LLM Fine-Tuning** | Fine-tuning experiments focused on conversational style adaptation and training workflows. | LoRA • Datasets • Training Pipelines |
 | **ATS Resume Optimizer** | Resume analysis and optimization tool focused on ATS heuristics, keyword alignment, and formatting improvements. | Python • NLP • Resume Analysis |
 | **Sentiment Analysis Projects** | NLP projects for IMDb reviews and COVID-19 text, including preprocessing, feature extraction, and model evaluation. | Python • NLP • Classification |
-
----
 
 ### Developer Tools, OSS & Product Prototypes
 
@@ -96,12 +90,100 @@ I like building systems that are not just demos, but have real architecture behi
 
 ---
 
-## 🧠 What I Build Best
+## What I Build Best
 
 ```txt
-AI Agents            → MCP servers, agent tools, orchestration, safety wrappers, trust layers
-Data Engineering     → Airflow, dbt, Dagster, PostgreSQL, Kafka, Docker, analytics pipelines
-LLM Applications     → RAG, embeddings, extraction, prompt systems, evaluation, fine-tuning
-Applied ML           → recommender systems, NLP, sentiment analysis, backtesting, classification
-Developer Tooling    → local-first tools, reusable packages, automation, CLI/security utilities
-Product Engineering  → FastAPI backends, TypeScript prototypes, dashboards, APIs
+AI Agents            -> MCP servers, agent tools, orchestration, safety wrappers, trust layers
+Data Engineering     -> Airflow, dbt, Dagster, PostgreSQL, Kafka, Docker, analytics pipelines
+LLM Applications     -> RAG, embeddings, extraction, prompt systems, evaluation, fine-tuning
+Applied ML           -> recommender systems, NLP, sentiment analysis, backtesting, classification
+Developer Tooling    -> local-first tools, reusable packages, automation, CLI/security utilities
+Product Engineering  -> FastAPI backends, TypeScript prototypes, dashboards, APIs
+```
+
+---
+
+## Tech Stack
+
+### Languages
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-336791?style=flat-square&logo=postgresql&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+
+### AI / LLM / Agents
+
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square)
+![LlamaIndex](https://img.shields.io/badge/LlamaIndex-111827?style=flat-square)
+![FAISS](https://img.shields.io/badge/FAISS-0467DF?style=flat-square)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square)
+![MCP](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-7C3AED?style=flat-square)
+
+### Data Engineering
+
+![Airflow](https://img.shields.io/badge/Apache%20Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white)
+![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white)
+![Dagster](https://img.shields.io/badge/Dagster-531B93?style=flat-square)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Kafka](https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
+![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black)
+
+### ML / Analytics
+
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
+![PySpark](https://img.shields.io/badge/PySpark-E25A1C?style=flat-square&logo=apachespark&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
+
+### Cloud / Infra / Observability
+
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)
+![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-000000?style=flat-square&logo=opentelemetry&logoColor=white)
+
+---
+
+## Current Focus
+
+- Building safer and more reliable **AI agent infrastructure**
+- Exploring **MCP servers** for data, prompt, and developer workflows
+- Designing **agent trust, observability, and audit systems**
+- Shipping production-style **data + ML pipelines**
+- Improving LLM applications with better **retrieval, evaluation, and structured outputs**
+
+---
+
+## GitHub Activity
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=ujjwalredd&show_icons=true&hide_border=true" height="165" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ujjwalredd&layout=compact&hide_border=true" height="165" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=ujjwalredd&hide_border=true" height="165" />
+</p>
+
+---
+
+## Let's Connect
+
+I am always interested in conversations around AI agents, applied ML, data engineering, LLM infrastructure, and startup/product ideas.
+
+- Portfolio: [ujjwalreddyks.com](https://ujjwalreddyks.com)
+- LinkedIn: [linkedin.com/in/ujjwalreddyks](https://www.linkedin.com/in/ujjwalreddyks)
+- Google Scholar: [Scholar Profile](https://scholar.google.com/citations?user=hd8H_dIAAAAJ&hl=en)
+- Email: [ujjwalreddyks@gmail.com](mailto:ujjwalreddyks@gmail.com)
+
+---
+
+<p align="center">
+  <i>Building reliable AI systems, one agent and pipeline at a time.</i>
+</p>
