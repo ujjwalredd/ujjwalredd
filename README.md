@@ -29,7 +29,7 @@
 
 ## About Me
 
-I am a Data Science graduate student at Indiana University focused on **AI agents, data engineering, applied machine learning, and LLM-powered systems**.
+I graduated with a degree in Data Science from Indiana University, with a focus on **AI agents, data engineering, applied machine learning, and LLM-powered systems**.
 
 My work sits at the intersection of:
 
