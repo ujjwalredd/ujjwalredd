@@ -1,0 +1,495 @@
+{
+ "version": 1,
+ "explanations": {
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::daily_readme": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "daily_readme",
+    "contentHash": "ff9a2865c1da78b2175bf7aa"
+   },
+   "oneLiner": "Formats age as years/months/days string",
+   "detail": "Computes relativedelta between today and birthday, returns formatted string with pluralized units. Appends birthday cake emoji if month/day diff is zero.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::format_plural": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "format_plural",
+    "contentHash": "5ec57ef13509e8a0393988e4"
+   },
+   "oneLiner": "Returns 's' unless unit==1",
+   "detail": "Takes numeric unit, returns empty string if 1 else 's'. Used to pluralize 'day'/'month'/'year' labels.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::simple_request": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "simple_request",
+    "contentHash": "d49fd5c6a719da428e6cda1b"
+   },
+   "oneLiner": "POSTs GraphQL query, raises on non-200",
+   "detail": "Sends query+variables to GitHub GraphQL endpoint with HEADERS auth. Returns response on 200, else raises Exception with func name, status, text, QUERY_COUNT.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::graph_commits": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "graph_commits",
+    "contentHash": "7d393a9eb98e825cac45b1d0"
+   },
+   "oneLiner": "Fetches total contribution count in date range",
+   "detail": "Runs GraphQL contributionsCollection query for USER_NAME between start_date/end_date. Returns int totalContributions; increments query_count.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::graph_repos_stars": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "graph_repos_stars",
+    "contentHash": "0d6710e0d725923f64747726"
+   },
+   "oneLiner": "Fetches repo count or star count via GraphQL",
+   "detail": "Queries repositories filtered by owner_affiliation, paginated via cursor. Returns totalCount if count_type='repos', else calls stars_counter on edges.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::recursive_loc": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "recursive_loc",
+    "contentHash": "91b974a3536bfe3ef193883d"
+   },
+   "oneLiner": "Paginates commit history, sums additions/deletions",
+   "detail": "Queries 100 commits at a time via cursor from repo's default branch. On success delegates to loc_counter_one_repo; on failure force-closes cache file then raises (403 = abuse limit).",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::loc_counter_one_repo": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "loc_counter_one_repo",
+    "contentHash": "9c9c812a83a0bce89df3b4c1"
+   },
+   "oneLiner": "Sums LOC for commits authored by me, recurses pages",
+   "detail": "Iterates commit edges, adds additions/deletions/my_commits only when author matches OWNER_ID. If more pages exist, recurses into recursive_loc with next cursor.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::loc_query": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "loc_query",
+    "contentHash": "3bffc565550708ea2dcea705"
+   },
+   "oneLiner": "Paginates repo list (60 at a time), triggers cache build",
+   "detail": "Queries repos with owner_affiliation filter, 60 per page, recursing on hasNextPage. On last page, passes accumulated edges to cache_builder.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::cache_builder": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "cache_builder",
+    "contentHash": "ca3bbc029b7d844e7fb4ff42"
+   },
+   "oneLiner": "Updates per-repo LOC cache file if commit counts changed",
+   "detail": "Reads/creates cache file keyed by sha256(username); rebuilds via flush_cache if repo count changed or force_cache. For each repo, if cached commit total mismatches current, calls recursive_loc to refresh LOC, then sums all loc_add/loc_del; returns [add,del,net,cached_bool]. Empty repos caught via TypeError, zeroed out.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::flush_cache": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "flush_cache",
+    "contentHash": "7bb7684cee1e9df8a46e9402"
+   },
+   "oneLiner": "Resets cache file entries to zero for all repos",
+   "detail": "Keeps comment block, writes fresh line per repo edge (hash + '0 0 0 0'). Called when repo count changed or file just created.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::add_archive": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "add_archive",
+    "contentHash": "937e6f2086f6154cf7ef1e24"
+   },
+   "oneLiner": "Adds stats from deleted repos via saved archive file",
+   "detail": "Reads cache/repository_archive.txt, strips 7-line header/3-line footer comment block, sums LOC and commits from remaining lines. Adds extra commit count from last line's 5th field; gotcha: hardcoded slice indices [7:-3] assume fixed comment format.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::force_close_file": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "force_close_file",
+    "contentHash": "bbc2b251e03248d4deac7c34"
+   },
+   "oneLiner": "Emergency-writes cache data before crash",
+   "detail": "Writes cache_comment + data to cache file so partial progress isn't lost. Called right before recursive_loc raises on API failure.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::stars_counter": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "stars_counter",
+    "contentHash": "a415e1e6b0906a13007a5ffa"
+   },
+   "oneLiner": "Sums stargazers count across repo edges",
+   "detail": "Iterates list of repo nodes, accumulates totalCount from stargazers. Returns int total.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::svg_overwrite": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "svg_overwrite",
+    "contentHash": "a6ddd9585844d447d46c7054"
+   },
+   "oneLiner": "Injects computed stats into SVG text elements",
+   "detail": "Parses SVG file, calls justify_format for each stat field (commits, stars, repos, contributions, followers, LOC add/del/net) with fixed padding lengths. Writes modified tree back to same file.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::justify_format": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "justify_format",
+    "contentHash": "565cfbd511501f40cf311f7c"
+   },
+   "oneLiner": "Sets element text and pads with dots for alignment",
+   "detail": "Formats ints with comma separators, calls find_and_replace for main text and a matching '_dots' element with computed dot padding. Dot count/spacing depends on length param vs text length; short gaps (<=2) use fixed spacing map.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::find_and_replace": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "find_and_replace",
+    "contentHash": "bf8b15fb5492c28f64afb486"
+   },
+   "oneLiner": "Sets text of SVG element by id",
+   "detail": "Finds element via XPath id selector, sets .text if found. No-op if element missing.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::commit_counter": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "commit_counter",
+    "contentHash": "d4077abaa9e65313ef49d221"
+   },
+   "oneLiner": "Sums commit counts from cache file",
+   "detail": "Reads cache file, skips comment_size header lines, sums 3rd whitespace-separated field (commit count) per line. Returns total int.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::user_getter": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "user_getter",
+    "contentHash": "0e8c55edcd836b1f236613e3"
+   },
+   "oneLiner": "Fetches user's GraphQL node ID and account creation date",
+   "detail": "Queries id and createdAt for given username. Returns tuple ({'id':...}, createdAt string).",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::follower_getter": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "follower_getter",
+    "contentHash": "a594e4700b9364995c5407b2"
+   },
+   "oneLiner": "Fetches follower count for username",
+   "detail": "Queries followers.totalCount via GraphQL. Returns int.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::query_count": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "query_count",
+    "contentHash": "442ab47ac58761e1342b8dd8"
+   },
+   "oneLiner": "Increments global API call counter by func id",
+   "detail": "Mutates global QUERY_COUNT dict, incrementing entry keyed by funct_id. No return value.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::perf_counter": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "perf_counter",
+    "contentHash": "5c5bfc4d1fb3e13edd77b72a"
+   },
+   "oneLiner": "Times execution of a function call",
+   "detail": "Runs funct(*args), measures elapsed time via time.perf_counter(). Returns tuple (result, elapsed_seconds).",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py::formatter": {
+   "anchor": {
+    "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+    "qualifiedName": "formatter",
+    "contentHash": "ea398959dddf9a27edd04905"
+   },
+   "oneLiner": "Prints timing line, optionally returns padded value",
+   "detail": "Prints query_type label and difference formatted as s or ms depending on magnitude. If whitespace given, returns funct_return as comma-formatted left-padded string, else returns raw funct_return.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "today.py::format_plural": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "format_plural",
+    "contentHash": "5ec57ef13509e8a0393988e4"
+   },
+   "oneLiner": "Returns 's' unless unit==1",
+   "detail": "Takes numeric unit, returns empty string if 1 else 's'. Used to pluralize 'day'/'month'/'year' labels.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "today.py::simple_request": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "simple_request",
+    "contentHash": "d49fd5c6a719da428e6cda1b"
+   },
+   "oneLiner": "POSTs GraphQL query, raises on non-200",
+   "detail": "Sends query+variables to GitHub GraphQL endpoint with HEADERS auth. Returns response on 200, else raises Exception with func name, status, text, QUERY_COUNT.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "today.py::graph_commits": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "graph_commits",
+    "contentHash": "7d393a9eb98e825cac45b1d0"
+   },
+   "oneLiner": "Fetches total contribution count in date range",
+   "detail": "Runs GraphQL contributionsCollection query for USER_NAME between start_date/end_date. Returns int totalContributions; increments query_count.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "today.py::graph_repos_stars": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "graph_repos_stars",
+    "contentHash": "0d6710e0d725923f64747726"
+   },
+   "oneLiner": "Fetches repo count or star count via GraphQL",
+   "detail": "Queries repositories filtered by owner_affiliation, paginated via cursor. Returns totalCount if count_type='repos', else calls stars_counter on edges.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "today.py::loc_counter_one_repo": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "loc_counter_one_repo",
+    "contentHash": "9c9c812a83a0bce89df3b4c1"
+   },
+   "oneLiner": "Sums LOC for commits authored by me, recurses pages",
+   "detail": "Iterates commit edges, adds additions/deletions/my_commits only when author matches OWNER_ID. If more pages exist, recurses into recursive_loc with next cursor.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "today.py::loc_query": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "loc_query",
+    "contentHash": "3bffc565550708ea2dcea705"
+   },
+   "oneLiner": "Paginates repo list (60 at a time), triggers cache build",
+   "detail": "Queries repos with owner_affiliation filter, 60 per page, recursing on hasNextPage. On last page, passes accumulated edges to cache_builder.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "today.py::cache_builder": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "cache_builder",
+    "contentHash": "ca3bbc029b7d844e7fb4ff42"
+   },
+   "oneLiner": "Updates per-repo LOC cache file if commit counts changed",
+   "detail": "Reads/creates cache file keyed by sha256(username); rebuilds via flush_cache if repo count changed or force_cache. For each repo, if cached commit total mismatches current, calls recursive_loc to refresh LOC, then sums all loc_add/loc_del; returns [add,del,net,cached_bool]. Empty repos caught via TypeError, zeroed out.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "today.py::flush_cache": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "flush_cache",
+    "contentHash": "7bb7684cee1e9df8a46e9402"
+   },
+   "oneLiner": "Resets cache file entries to zero for all repos",
+   "detail": "Keeps comment block, writes fresh line per repo edge (hash + '0 0 0 0'). Called when repo count changed or file just created.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "today.py::force_close_file": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "force_close_file",
+    "contentHash": "bbc2b251e03248d4deac7c34"
+   },
+   "oneLiner": "Emergency-writes cache data before crash",
+   "detail": "Writes cache_comment + data to cache file so partial progress isn't lost. Called right before recursive_loc raises on API failure.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "today.py::stars_counter": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "stars_counter",
+    "contentHash": "a415e1e6b0906a13007a5ffa"
+   },
+   "oneLiner": "Sums stargazers count across repo edges",
+   "detail": "Iterates list of repo nodes, accumulates totalCount from stargazers. Returns int total.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "today.py::find_and_replace": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "find_and_replace",
+    "contentHash": "bf8b15fb5492c28f64afb486"
+   },
+   "oneLiner": "Sets text of SVG element by id",
+   "detail": "Finds element via XPath id selector, sets .text if found. No-op if element missing.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "today.py::user_getter": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "user_getter",
+    "contentHash": "0e8c55edcd836b1f236613e3"
+   },
+   "oneLiner": "Fetches user's GraphQL node ID and account creation date",
+   "detail": "Queries id and createdAt for given username. Returns tuple ({'id':...}, createdAt string).",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "today.py::follower_getter": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "follower_getter",
+    "contentHash": "a594e4700b9364995c5407b2"
+   },
+   "oneLiner": "Fetches follower count for username",
+   "detail": "Queries followers.totalCount via GraphQL. Returns int.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "today.py::query_count": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "query_count",
+    "contentHash": "442ab47ac58761e1342b8dd8"
+   },
+   "oneLiner": "Increments global API call counter by func id",
+   "detail": "Mutates global QUERY_COUNT dict, incrementing entry keyed by funct_id. No return value.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "today.py::perf_counter": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "perf_counter",
+    "contentHash": "5c5bfc4d1fb3e13edd77b72a"
+   },
+   "oneLiner": "Times execution of a function call",
+   "detail": "Runs funct(*args), measures elapsed time via time.perf_counter(). Returns tuple (result, elapsed_seconds).",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "today.py::formatter": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "formatter",
+    "contentHash": "ea398959dddf9a27edd04905"
+   },
+   "oneLiner": "Prints timing line, optionally returns padded value",
+   "detail": "Prints query_type label and difference formatted as s or ms depending on magnitude. If whitespace given, returns funct_return as comma-formatted left-padded string, else returns raw funct_return.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:24.088Z"
+  },
+  "today.py::daily_readme": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "daily_readme",
+    "contentHash": "9d3394692a3bba49877cb86a"
+   },
+   "oneLiner": "Formats account age as 'X years, X months, X days'",
+   "detail": "Takes joined date, computes relativedelta vs today, returns pluralized string. No side effects, pure calc.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:15:05.120Z"
+  },
+  "today.py::recursive_loc": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "recursive_loc",
+    "contentHash": "50cb620f8a06fa61eca5a7cf"
+   },
+   "oneLiner": "Paginates GitHub GraphQL commit history for one repo",
+   "detail": "Fetches 100 commits/page via cursor, recurses through loc_counter_one_repo to sum additions/deletions/commits. On non-200 closes cache file and raises (403 = abuse-limit hit); returns 0 if repo has no default branch.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:15:05.120Z"
+  },
+  "today.py::svg_overwrite": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "svg_overwrite",
+    "contentHash": "a3aa96464c657991d2c24e73"
+   },
+   "oneLiner": "Writes stat values into SVG template in place",
+   "detail": "Parses SVG XML, finds placeholder tags by name, swaps in formatted age/commits/stars/repos/contributions/followers/LOC-added/deleted/total, writes file back. Mutates file on disk; number formatting uses comma separators; relies on find_and_replace matching tag ids exactly.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:47:48.653Z"
+  },
+  "today.py::justify_format": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "justify_format",
+    "contentHash": "03c5609524c7b763c2f7bfdf"
+   },
+   "oneLiner": "Sets element text and pads with dots for alignment",
+   "detail": "Converts int to comma-formatted string, replaces element_id text, then computes dot padding (length - text len) and replaces sibling '{element_id}_dots' element. Special-cases padding <=2 (empty/space/'. ') vs longer dot runs.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:15:05.120Z"
+  },
+  "today.py::commit_counter": {
+   "anchor": {
+    "file": "today.py",
+    "qualifiedName": "commit_counter",
+    "contentHash": "64a93cae3a370fd6270435e4"
+   },
+   "oneLiner": "Sums total commits from cache file",
+   "detail": "Reads cache/<sha256(username)>.txt, skips comment_size header lines, sums 3rd whitespace-separated field per line. Assumes fixed cache line format from cache_builder.",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:15:05.120Z"
+  }
+ },
+ "fileSummaries": {
+  "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py": {
+   "file": "../../../../private/tmp/claude-501/-Users-ujjwalreddyks-Desktop-ujjwalredd/c2b369f6-ac5e-4b5b-97c3-609c3783a116/scratchpad/ref-repo/today.py",
+   "overview": "Script owns GitHub profile stats generation: pulls contribution/LOC/star/follower data via GraphQL, caches per-repo LOC counts to disk, renders results into SVG readme badges.",
+   "aggHash": "77902b1260b438731d944382",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:14:27.963Z"
+  },
+  "today.py": {
+   "file": "today.py",
+   "overview": "Owns GitHub profile stat generation: fetch commits/repos/stars/LOC via GraphQL, cache LOC per repo, render values into SVG templates. Sits standalone as scheduled script, no other module depends on it.",
+   "aggHash": "1c509f667752c0273a664c98",
+   "model": "claude-code",
+   "createdAt": "2026-07-10T01:47:53.473Z"
+  }
+ },
+ "directorySummaries": {}
+}
