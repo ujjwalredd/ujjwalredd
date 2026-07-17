@@ -58,7 +58,7 @@ text, tspan {white-space: pre;}
 <text x="390" y="30" fill="#24292f">
 <tspan x="390" y="30">ujjwal@reddy</tspan> -———————————————————————————————————————————————————————-—-
 <tspan x="390" y="50" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ............................................. </tspan><tspan class="value">macOS, Linux, Docker</tspan>
-<tspan x="390" y="70" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> .................................... </tspan><tspan class="value" id="age_data">6 years, 1 month, 15 days</tspan>
+<tspan x="390" y="70" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> .................................... </tspan><tspan class="value" id="age_data">6 years, 1 month, 17 days</tspan>
 <tspan x="390" y="90" class="cc">. </tspan><tspan class="key">Host</tspan>:<tspan class="cc"> ................................ </tspan><tspan class="value">Indiana University, Bloomington</tspan>
 <tspan x="390" y="110" class="cc">. </tspan><tspan class="key">Role</tspan>:<tspan class="cc"> ...................................... </tspan><tspan class="value">AI Engineer, LLM Engineer</tspan>
 <tspan x="390" y="130" class="cc">. </tspan><tspan class="key">Focus</tspan>:<tspan class="cc"> .......................... </tspan><tspan class="value">Generative AI, Agentic AI, AI Safety</tspan>
