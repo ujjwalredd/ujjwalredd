@@ -12,6 +12,7 @@ import hashlib
 HEADERS = {'authorization': 'token ' + os.environ['ACCESS_TOKEN']}
 USER_NAME = os.environ['USER_NAME']  # 'ujjwalredd'
 QUERY_COUNT = {'user_getter': 0, 'follower_getter': 0, 'graph_repos_stars': 0, 'recursive_loc': 0, 'graph_commits': 0, 'loc_query': 0}
+TRANSIENT_STATUS_CODES = {500, 502, 503, 504}
 
 
 def daily_readme(joined):
@@ -42,10 +43,24 @@ def simple_request(func_name, query, variables):
     """
     Returns a request, or raises an Exception if the response does not succeed.
     """
-    request = requests.post('https://api.github.com/graphql', json={'query': query, 'variables': variables}, headers=HEADERS)
+    request = post_with_retry(query, variables)
     if request.status_code == 200:
         return request
     raise Exception(func_name, ' has failed with a', request.status_code, request.text, QUERY_COUNT)
+
+
+def post_with_retry(query, variables, max_attempts=4):
+    """
+    Retry transient GitHub API failures to avoid aborting the workflow on short outages.
+    """
+    for attempt in range(1, max_attempts + 1):
+        request = requests.post('https://api.github.com/graphql', json={'query': query, 'variables': variables}, headers=HEADERS)
+        if request.status_code == 200:
+            return request
+        if request.status_code in TRANSIENT_STATUS_CODES and attempt < max_attempts:
+            time.sleep(2 ** (attempt - 1))
+            continue
+        return request
 
 
 def graph_commits(start_date, end_date):
@@ -142,7 +157,7 @@ def recursive_loc(owner, repo_name, data, cache_comment, addition_total=0, delet
         }
     }'''
     variables = {'repo_name': repo_name, 'owner': owner, 'cursor': cursor}
-    request = requests.post('https://api.github.com/graphql', json={'query': query, 'variables': variables}, headers=HEADERS)
+    request = post_with_retry(query, variables)
     if request.status_code == 200:
         if request.json()['data']['repository']['defaultBranchRef'] is not None:
             return loc_counter_one_repo(owner, repo_name, data, cache_comment, request.json()['data']['repository']['defaultBranchRef']['target']['history'], addition_total, deletion_total, my_commits)
