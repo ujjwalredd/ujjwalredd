@@ -309,7 +309,9 @@ def stars_counter(data):
     """
     total_stars = 0
     for node in data:
-        total_stars += node['node']['stargazers']['totalCount']
+        repo = node.get('node') if node else None
+        if repo and repo.get('stargazers'):
+            total_stars += repo['stargazers'].get('totalCount', 0)
     return total_stars
 
 
